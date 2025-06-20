@@ -8,10 +8,10 @@ if (titulo) {
       titulo.style.textShadow = "";
       titulo.style.transform = "skewX(0)";
     }, 100);
-  }, 3000);
+  }, 3000); 
 }
 
-// Hover vibrante en los h2
+// Hover vibrante en los h2 ss 
 document.querySelectorAll("h2").forEach((titulo) => {
   titulo.addEventListener("mouseenter", () => {
     titulo.style.color = "#ff0";
