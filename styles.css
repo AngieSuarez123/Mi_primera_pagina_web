@@ -181,77 +181,18 @@ footer {
 
 /* Animación de brillo dorado para el título */
 @keyframes glow-gold {
-  0%, 85% {
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
-    color: white;
-    transform: scale(1);
+  0%, 100% {
+    text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 15px #FFD700;
+    color: #fff;
   }
-  5% {
-    text-shadow: 
-      2px 2px 4px rgba(0,0,0,0.8),
-      0 0 20px #FFD700, 
-      0 0 40px #FFD700, 
-      0 0 60px #FFD700,
-      0 0 80px #FFD700;
+  50% {
+    text-shadow: 0 0 20px #FFD700, 0 0 30px #FFD700, 0 0 40px #FFD700;
     color: #FFD700;
-    transform: scale(1.05);
-  }
-  10% {
-    text-shadow: 
-      2px 2px 4px rgba(0,0,0,0.8),
-      0 0 30px #FFD700, 
-      0 0 50px #FFD700, 
-      0 0 70px #FFD700,
-      0 0 90px #FFD700;
-    color: #FFD700;
-    transform: scale(1.08);
-  }
-  15% {
-    text-shadow: 
-      2px 2px 4px rgba(0,0,0,0.8),
-      0 0 20px #FFD700, 
-      0 0 40px #FFD700, 
-      0 0 60px #FFD700,
-      0 0 80px #FFD700;
-    color: #FFD700;
-    transform: scale(1.05);
-  }
-  20% {
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
-    color: white;
-    transform: scale(1);
   }
 }
 
-/* Título h1 con brillo automático cada 20s - Selector con alta especificidad */
-header.hero-section .hero-content h1 {
-  animation: glow-gold 20s ease-in-out infinite !important;
-  transition: all 0.3s ease;
+/* Título h1 con brillo automático cada 20s */
+header h1 {
+  animation: glow-gold 1s ease-in-out infinite;
 }
 
-/* Alternativa más sutil con mejor rendimiento */
-@keyframes glow-gold-subtle {
-  0%, 90% {
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
-    color: white;
-  }
-  5% {
-    text-shadow: 
-      2px 2px 4px rgba(0,0,0,0.8),
-      0 0 10px #FFD700, 
-      0 0 20px #FFD700, 
-      0 0 30px #FFD700;
-    color: #FFD700;
-  }
-  10% {
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
-    color: white;
-  }
-}
-
-/* Para usar la versión sutil, cambia la clase: */
-/*
-.hero-content h1 {
-  animation: glow-gold-subtle 20s ease-in-out infinite;
-}
-*/
