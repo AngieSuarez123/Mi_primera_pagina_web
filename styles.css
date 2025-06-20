@@ -154,20 +154,59 @@ footer {
   scroll-margin-top: 80px;
 }
 
+
 /* Animación de brillo dorado para el título */
 @keyframes glow-gold {
-  0%, 100% {
-    text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 15px #FFD700;
+  0%, 95% {
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.5), 0 0 10px rgba(255, 215, 0, 0.3);
     color: #fff;
   }
-  50% {
-    text-shadow: 0 0 20px #FFD700, 0 0 30px #FFD700, 0 0 40px #FFD700;
+  2.5% {
+    text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700, 0 0 40px #FFD700;
     color: #FFD700;
+  }
+  5% {
+    text-shadow: 0 0 15px #FFD700, 0 0 25px #FFD700, 0 0 35px #FFD700, 0 0 45px #FFD700;
+    color: #FFD700;
+  }
+  7.5% {
+    text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700, 0 0 40px #FFD700;
+    color: #FFD700;
+  }
+  10% {
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.5), 0 0 10px rgba(255, 215, 0, 0.3);
+    color: #fff;
   }
 }
 
 /* Título h1 con brillo automático cada 20s */
-header h1 {
-  animation: glow-gold 1s ease-in-out infinite;
+.hero-content h1 {
+  animation: glow-gold 20s ease-in-out infinite;
 }
 
+/* Alternativa más sutil con mejor rendimiento */
+@keyframes glow-gold-subtle {
+  0%, 90% {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    color: white;
+  }
+  5% {
+    text-shadow: 
+      2px 2px 4px rgba(0,0,0,0.8),
+      0 0 10px #FFD700, 
+      0 0 20px #FFD700, 
+      0 0 30px #FFD700;
+    color: #FFD700;
+  }
+  10% {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    color: white;
+  }
+}
+
+/* Para usar la versión sutil, cambia la clase: */
+/*
+.hero-content h1 {
+  animation: glow-gold-subtle 20s ease-in-out infinite;
+}
+*/
